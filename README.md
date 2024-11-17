@@ -4,4 +4,5 @@ This repository provides an automated workflow for updating and hosting your res
 
 You can check it out here: [ayush2004patel.github.io/resume](https://ayush2004patel.github.io/resume)
 
-If you use this template, please give credit by forking or starring this repository, or by adding a note in your project.
+This project is licensed under the MIT License.If you use this template, please give credit by forking or starring this repository, or by adding a note in your project.
+
