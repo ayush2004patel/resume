@@ -1,11 +1,12 @@
 %-------------------------
 % Resume in Latex
-% Author : Ayush Patel
+% Author : Jake Gutierrez
 % Based off of: https://github.com/sb2nov/resume
 % License : MIT
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
+\setlength{\footskip}{4.08003pt}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -133,19 +134,30 @@
 \faGithub \hspace{-0.2pt} \href{https://github.com/ayush2004patel}{\underline{github.com/ayush2004patel}} ~
 \faGlobe \hspace{-0.2pt} \href{https://ayushpatel.co/}{\underline{ayushpatel.co}} ~
 \faLinkedin \hspace{-0.2pt} \href{https://www.linkedin.com/in/ayush-patel2004/}{\underline{linkedin.com/in/ayush-patel2004}} \\ 
+\vspace{10pt} \faPhone \hspace{-0.2pt} \href{tel:7984886601}{\underline{+91 7984886601}} ~
 \vspace{10pt} \faEnvelope \hspace{-0.2pt} \href{mailto:ayushpatel2044.work@gmail.com}{\underline{ayushpatel2044.work@gmail.com}}
 \end{center}
+
+% ---------- SUMMARY ----------
+\section{Summary}
+\vspace{6pt}
+\resumeSubHeadingListStart
+\item
+\small{Full-stack developer proficient in the MERN stack, React.js, and Next.js. Passionate about building scalable applications and solving complex problems.}
+\resumeSubHeadingListEnd
 
 
 % ---------- EDUCATION ----------
 
 \section{Education} \vspace{5pt}
 \resumeSubHeadingListStart
-\resumeSubheading
-{Swarrnim Startup and Innovation University}{ Ahmedabad, Gujarat, India}
-{Bachelor of Technology in Computer Engineering}{August 2021 - Present} \vspace{-10pt}
-\resumeSubSubheading{Current SGPA: 9.40/10}{}
+\item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    {\large Swarrnim Startup and Innovation University} & {\large Ahmedabad, Gujarat, India} \\
+    \small Bachelor of Technology in Computer Engineering & \small Current SGPA: 9.40/10
+\end{tabular*}
 \resumeSubHeadingListEnd
+
 
 
 % ---------- PROJECTS ----------
@@ -208,4 +220,5 @@
 
 
 %-------------------------------------------
-\end{document}  
+\end{document}
+
