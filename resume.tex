@@ -1,12 +1,11 @@
 %-------------------------
 % Resume in Latex
 % Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
+% Modified by : Ayush Patel
 % License : MIT
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
-\setlength{\footskip}{4.08003pt}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -25,84 +24,49 @@
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
 \usepackage{ragged2e}
-
 \usepackage{xcolor}
-\hypersetup{colorlinks,urlcolor=blue}
 
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0}
+}
 
-% serif
-% \usepackage{CormorantGaramond}
 \usepackage{charter}
 
+% Margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.7in}
-\addtolength{\evensidemargin}{-0.7in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.0in}
-
-
-% Adjust margins
-% \setlength{\topmargin}{-0.75in}
-% \setlength{\textheight}{10.5in}  % Increase the text height
-% \setlength{\oddsidemargin}{-0.5in}
-% \setlength{\evensidemargin}{-0.5in}
-% \setlength{\textwidth}{7in}
-
-
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generated pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
-%-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-\hypersetup{%
-  colorlinks=true,% hyperlinks will be colored
-  linkcolor=blue,% hyperlink text will be green
-  linkbordercolor=blue,% hyperlink border will be red
+  \item\small{{#1 \vspace{-2pt}}}
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \item
+  \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      {#1} & #2 \\
+      \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -118,107 +82,296 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}}
-
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 \begin{document}
 
 %----------HEADING----------
-
+\vspace{-15pt}
 \begin{center}
-\textbf{\Huge \scshape Ayush Patel} \\ \vspace{10pt}
-
-\faGithub \hspace{-0.2pt} \href{https://github.com/ayush2004patel}{\underline{github.com/ayush2004patel}} ~
-\faGlobe \hspace{-0.2pt} \href{https://ayushpatel.co/}{\underline{ayushpatel.co}} ~
-\faLinkedin \hspace{-0.2pt} \href{https://www.linkedin.com/in/ayush-patel2004/}{\underline{linkedin.com/in/ayush-patel2004}} \\ 
-\vspace{10pt} \faPhone \hspace{-0.2pt} \href{tel:7984886601}{\underline{+91 7984886601}} ~
-\vspace{10pt} \faEnvelope \hspace{-0.2pt} \href{mailto:ayushpatel2044.work@gmail.com}{\underline{ayushpatel2044.work@gmail.com}}
+    {\Huge \bfseries AYUSH PATEL} \\[6pt]
+    \small
+    \faPhone\ \underline{\href{tel:+917984886601}{+91 7984886601}} \;
+    \faEnvelope\ \underline{\href{mailto:ayushpatel2044.work@gmail.com}{ayushpatel2044.work@gmail.com}} \;
+    \faLinkedin\ \underline{\href{https://www.linkedin.com/in/ayush-patel2004/}{LinkedIn}} \;
+    \faGithub\ \underline{\href{https://github.com/ayush2004patel}{GitHub}}
 \end{center}
+\vspace{-8pt}
 
-% ---------- SUMMARY ----------
+%-----------SUMMARY-----------
 \section{Summary}
-\vspace{6pt}
 \resumeSubHeadingListStart
-\item
-\small{Full-stack developer proficient in the MERN stack, React.js, and Next.js. Passionate about building scalable applications and solving complex problems.}
+\item \small {
+Software Developer with professional experience in \textbf{ERPNext/Frappe} and modern JavaScript-based web applications. Specialized in the building of workflow-driven ERP systems, automating complex business processes and providing audit-ready reliable solutions for enterprise environments.
+}
 \resumeSubHeadingListEnd
 
-
-% ---------- EDUCATION ----------
-
-\section{Education} \vspace{5pt}
+%-----------EXPERIENCE-----------
+\section{Experience}
 \resumeSubHeadingListStart
-\item
-\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    {\large Swarrnim Startup and Innovation University} & {\large Ahmedabad, Gujarat, India} \\
-    \small Bachelor of Technology in Computer Engineering & \small Current SGPA: 9.40/10
-\end{tabular*}
+
+\resumeSubheading {Software Developer}{May 2024 -- Present} {Amax Consultancy Pvt. Ltd.}{Ahmedabad, Gujarat}
+\resumeItemListStart
+
+\resumeItem{Developed a \textbf{custom Stone Manufacturing ERP} using \textbf{ERPNext/Frappe}, digitizing stone lifecycle processes from selection to cutting.}
+
+\resumeItem{Engineered a \textbf{status-driven workflow system} managing 15+ stages (Selection, Transportation, QC, Carving) for process control.}
+
+\resumeItem{Designed \textbf{custom DocTypes and modules} aligned with business workflows, using \textbf{MariaDB/MySQL} for efficient data handling.}
+
+\resumeItem{Implemented \textbf{Python-based validations} to enforce business rules, ensure data integrity, and prevent invalid state transitions.}
+
+\resumeItem{Customized \textbf{ERPNext Desk UI} and forms to improve usability and align system behavior with real workflows.}
+
+\resumeItem{Developed and customized \textbf{ERPNext REST APIs} for secure data access and backend system integration.}
+
+\resumeItem{Designed \textbf{RBAC (Role-Based Access Control)} to manage permissions across supervisors, operators, and managers.}
+
+\resumeItem{Deployed and maintained the system on \textbf{cloud servers}, ensuring stability, bug fixes, and performance improvements.}
+
+\resumeItem{Familiar with \textbf{Accounting, Inventory, Sales, Purchase, and Manufacturing} modules (basic workflow understanding).}
+
+\resumeItemListEnd
+
 \resumeSubHeadingListEnd
 
-
-
-% ---------- PROJECTS ----------
-
+%-----------PROJECTS-----------
 \section{Projects}
-\vspace{5pt}
 \resumeSubHeadingListStart
+
 \resumeProjectHeading
-{\textbf{\href{https://github.com/ayush2004patel/collaborative-editor}{LiveDocs}\hspace{5pt}}{{[Next.js, TypeScript, Liveblocks, Lexical Editor, Tailwind CSS]}}}{}
+{\textbf{LiveDocs} $|$ \emph{Next.js, TypeScript, Liveblocks}}{\href{https://github.com/ayush2004patel/collaborative-editor}{\faExternalLink*}}
 \resumeItemListStart
-\resumeItem{Developed a real-time collaborative text editor focused on simplifying document collaboration and boosting productivity through seamless multi-user editing.}
-\resumeItem{Implemented document management features, including create, delete, and share, for efficient workflow.}
-\resumeItem{Enhanced user experience with inline comments, presence indicators, and activity notifications for seamless communication.}
+\resumeItem{Built a real-time collaborative document editor with multi-user editing, live presence, and cursor tracking using Liveblocks.}
+\resumeItem{Implemented document sharing, comments, and scalable frontend architecture using Next.js and TypeScript.}
 \resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Postgram} $|$ \emph{React.js, Appwrite, React Query}}{\href{https://github.com/ayush2004patel/social_media_app}{\faExternalLink*}}
+\resumeItemListStart
+\resumeItem{Built a full-stack social media platform with authentication, post creation, and user interactions using Appwrite as a Backend-as-a-Service.}
+\resumeItem{Optimized client-side data handling with React Query for caching, background updates, and responsive UI performance across devices.}
+\resumeItemListEnd
+
 \resumeSubHeadingListEnd
 
-\resumeSubHeadingListStart
-\resumeProjectHeading
-{\textbf{\href{https://github.com/ayush2004patel/social_media_app}{Postgram}\hspace{5pt}}{{[React.js, Appwrite, React Query, TypeScript, Shadcn, Tailwind CSS]}}}{}
-\resumeItemListStart
-\resumeItem{Built a responsive social media platform with features for exploring, liking, and saving posts, plus a detailed post view.}
-\resumeItem{Developed user-friendly profile and post management, including create, edit, and drag-and-drop file functionality.}
-\resumeItem{Utilized Appwrite for backend services and React Query for efficient data fetching and caching.}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
-
-\resumeSubHeadingListStart
-\resumeProjectHeading
-{\textbf{\href{https://github.com/ayush2004patel/Portfolio-v2}{Portfolio}\hspace{5pt}}{{[React.js, Three.js, React Three Fiber, React Three Drei, Email JS, Tailwind CSS]}}}{}
-\resumeItemListStart
-\resumeItem{Developed an immersive 3D portfolio website using React.js, React Three Fiber, and Three.js, creating a unique and engaging user experience.}
-\resumeItem{Implemented interactive features such as a dynamic project showcase and animated timeline.}
-\resumeItem{Integrated email functionality using EmailJS, enabling visitors to easily contact you through the website.}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
-
-\resumeSubHeadingListStart
-\resumeProjectHeading
-{\textbf{\href{https://github.com/ayush2004patel/prod-store}{ProdStore}\hspace{5pt}}{{[React.js, Node.js, Express.js, MongoDB, Chakra UI]}}}{}
-\resumeItemListStart
-\resumeItem{Developed a responsive product listing website using React.js and Chakra UI, focusing on a clean and user-friendly interface.}
-\resumeItem{Implemented full CRUD operations for product management, allowing users to add, update, view, and delete products.}
-\resumeItem{Utilized Node.js, Express.js, and MongoDB to build a backend for data storage and retrieval.}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
-
-
-%-----------PROGRAMMING SKILLS-----------
+%-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
-\vspace{5pt}
 \begin{itemize}[leftmargin=0.15in, label={}]
 \small{\item{
-      \textbf{Languages}{: Java, JavaScript } \\
-      \vspace{3pt}\textbf{Libraries/Frameworks}{: React.js,Node.js, Express.js} \\
-      \vspace{3pt}\textbf{UI Component Libraries}{: Chakra UI, Shadcn UI, Material UI, Tailwind CSS} \\
-      \vspace{3pt}\textbf{Databases/Servers}{: MongoDB, Mongoose, Appwrite} \\
-      \vspace{3pt}\textbf{Platforms/Tools}{: Git/GitHub, VS Code, Postman, NPM, Netlify, Vercel }
-      }}
+\textbf{Frameworks \& Tools}{: Frappe Framework, ERPNext, REST APIs, Node.js, Express.js, Git/GitHub, Postman} \\
+\textbf{Databases}{: MariaDB, MySQL, MongoDB} \\
+\textbf{Languages}{: JavaScript (ES6+), Python (Basic), Java, HTML5, CSS3} \\
+\textbf{Frontend}{: React.js, Tailwind CSS, Shadcn UI}
+}}
 \end{itemize}
 
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Swarrnim Startup and Innovation University}{Ahmedabad, Gujarat}
+{Bachelor of Technology in Computer Engineering (SGPA: 9.40/10)}{2021 -- 2025}
 
-%-------------------------------------------
+\resumeSubheading
+{Higher Secondary (Class XII)}{}
+{Science Stream}{2021}
+\resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+\resumeSubHeadingListStart
+\resumeItem{\textbf{Frontend Developer (React)} -- HackerRank}
+\resumeItem{\textbf{JavaScript} -- HackerRank}
+\resumeItem{\textbf{Introduction to Java} -- Coding Ninjas}
+\resumeSubHeadingListEnd
+
+\end{document}%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Modified by : Ayush Patel
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+\usepackage{ragged2e}
+\usepackage{xcolor}
+
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0}
+}
+
+\usepackage{charter}
+
+% Margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-2pt}}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\vspace{-15pt}
+\begin{center}
+    {\Huge \bfseries AYUSH PATEL} \\[6pt]
+    \small
+    \faPhone\ \underline{\href{tel:+917984886601}{+91 7984886601}} \;
+    \faEnvelope\ \underline{\href{mailto:ayushpatel2044.work@gmail.com}{ayushpatel2044.work@gmail.com}} \;
+    \faLinkedin\ \underline{\href{https://www.linkedin.com/in/ayush-patel2004/}{LinkedIn}} \;
+    \faGithub\ \underline{\href{https://github.com/ayush2004patel}{GitHub}}
+\end{center}
+\vspace{-8pt}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\resumeSubHeadingListStart
+\item \small {
+Software Developer with professional experience in \textbf{ERPNext/Frappe} and modern JavaScript-based web applications. Specialized in the building of workflow-driven ERP systems, automating complex business processes and providing audit-ready reliable solutions for enterprise environments.
+}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading {Software Developer}{May 2024 -- Present} {Amax Consultancy Pvt. Ltd.}{Ahmedabad, Gujarat}
+\resumeItemListStart
+
+\resumeItem{Developed a \textbf{custom Stone Manufacturing ERP} using \textbf{ERPNext/Frappe}, digitizing stone lifecycle processes from selection to cutting.}
+
+\resumeItem{Engineered a \textbf{status-driven workflow system} managing 15+ stages (Selection, Transportation, QC, Carving) for process control.}
+
+\resumeItem{Designed \textbf{custom DocTypes and modules} aligned with business workflows, using \textbf{MariaDB/MySQL} for efficient data handling.}
+
+\resumeItem{Implemented \textbf{Python-based validations} to enforce business rules, ensure data integrity, and prevent invalid state transitions.}
+
+\resumeItem{Customized \textbf{ERPNext Desk UI} and forms to improve usability and align system behavior with real workflows.}
+
+\resumeItem{Developed and customized \textbf{ERPNext REST APIs} for secure data access and backend system integration.}
+
+\resumeItem{Designed \textbf{RBAC (Role-Based Access Control)} to manage permissions across supervisors, operators, and managers.}
+
+\resumeItem{Deployed and maintained the system on \textbf{cloud servers}, ensuring stability, bug fixes, and performance improvements.}
+
+\resumeItem{Familiar with \textbf{Accounting, Inventory, Sales, Purchase, and Manufacturing} modules (basic workflow understanding).}
+
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{LiveDocs} $|$ \emph{Next.js, TypeScript, Liveblocks}}{\href{https://github.com/ayush2004patel/collaborative-editor}{\faExternalLink*}}
+\resumeItemListStart
+\resumeItem{Built a real-time collaborative document editor with multi-user editing, live presence, and cursor tracking using Liveblocks.}
+\resumeItem{Implemented document sharing, comments, and scalable frontend architecture using Next.js and TypeScript.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Postgram} $|$ \emph{React.js, Appwrite, React Query}}{\href{https://github.com/ayush2004patel/social_media_app}{\faExternalLink*}}
+\resumeItemListStart
+\resumeItem{Built a full-stack social media platform with authentication, post creation, and user interactions using Appwrite as a Backend-as-a-Service.}
+\resumeItem{Optimized client-side data handling with React Query for caching, background updates, and responsive UI performance across devices.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Frameworks \& Tools}{: Frappe Framework, ERPNext, REST APIs, Node.js, Express.js, Git/GitHub, Postman} \\
+\textbf{Databases}{: MariaDB, MySQL, MongoDB} \\
+\textbf{Languages}{: JavaScript (ES6+), Python (Basic), Java, HTML5, CSS3} \\
+\textbf{Frontend}{: React.js, Tailwind CSS, Shadcn UI}
+}}
+\end{itemize}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Swarrnim Startup and Innovation University}{Ahmedabad, Gujarat}
+{Bachelor of Technology in Computer Engineering (SGPA: 9.40/10)}{2021 -- 2025}
+
+\resumeSubheading
+{Higher Secondary (Class XII)}{}
+{Science Stream}{2021}
+\resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+\resumeSubHeadingListStart
+\resumeItem{\textbf{Frontend Developer (React)} -- HackerRank}
+\resumeItem{\textbf{JavaScript} -- HackerRank}
+\resumeItem{\textbf{Introduction to Java} -- Coding Ninjas}
+\resumeSubHeadingListEnd
+
 \end{document}
-
